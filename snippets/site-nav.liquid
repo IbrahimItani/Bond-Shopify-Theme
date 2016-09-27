@@ -1,0 +1,121 @@
+<ul class="site-nav{% unless settings.nav_below_logo %} large--text-center{% endunless %}" id="AccessibleNav">
+
+    <a href="../cart" class="site-nav__link" onmouseover="document.cartButton.src='https://cdn.shopify.com/s/files/1/1365/6099/files/cartHover.png?12221306217897870180';"
+           onmouseout="document.cartButton.src='https://cdn.shopify.com/s/files/1/1365/6099/files/cart.png?12221306217897870180';">
+          <img src="https://cdn.shopify.com/s/files/1/1365/6099/files/cart.png?12221306217897870180" style="z-index: 1000; position: relative; width: 3.3%; margin-left: 86%; margin-top: -3%;" name="cartButton" />
+    </a>
+
+
+  {% for link in linklists.main-menu.links %}
+
+    {% assign child_list_handle = link.title | handleize %}
+
+
+      {% if forloop.index == 1 %}
+
+      <li>
+        <a href="{{ link.url }}" class="site-nav__link" onmouseover="document.shopButton.src='https://cdn.shopify.com/s/files/1/1365/6099/files/shop-hover.png?7292234058503633899';"
+           onmouseout="document.shopButton.src='https://cdn.shopify.com/s/files/1/1365/6099/files/shop.png?7292234058503633899';">
+          <img src="https://cdn.shopify.com/s/files/1/1365/6099/files/shop.png?7292234058503633899" style="z-index: 1000; position: relative;" name="shopButton" />
+        </a>
+      </li>
+
+    {% endif %}
+
+    {% if forloop.index == 2 %}
+
+      <li>
+        <a href="{{ link.url }}" class="site-nav__link" onmouseover="document.lookbookButton.src='https://cdn.shopify.com/s/files/1/1365/6099/files/lookbook-hover.png?7292234058503633899';"
+           onmouseout="document.lookbookButton.src='https://cdn.shopify.com/s/files/1/1365/6099/files/lookbook.png?7292234058503633899';">
+          <img src="https://cdn.shopify.com/s/files/1/1365/6099/files/lookbook.png?7292234058503633899" style="z-index: 1000; position: relative;" name="lookbookButton" />
+        </a>
+      </li>
+
+        <a href="/"  itemprop="url">
+          <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" style="margin-bottom: -3%; width: 27%; z-index: 1000;  position: relative;" class="logo-navbar">
+      </a>
+
+    {% endif %}
+
+    {% if forloop.index == 3 %}
+
+    <li>
+        <a href="{{ link.url }}" class="site-nav__link" onmouseover="document.vaultButton.src='https://cdn.shopify.com/s/files/1/1365/6099/files/vault-hover.png?7292234058503633899';"
+           onmouseout="document.vaultButton.src='https://cdn.shopify.com/s/files/1/1365/6099/files/vault.png?7292234058503633899';">
+          <img src="https://cdn.shopify.com/s/files/1/1365/6099/files/vault.png?7292234058503633899" style="z-index: 1000; position: relative;" name="vaultButton" />
+        </a>
+      </li>
+
+
+    {% endif %}
+
+    {% if forloop.index == 4 %}
+
+      <li>
+        <a href="{{ link.url }}" class="site-nav__link" onmouseover="document.contactButton.src='https://cdn.shopify.com/s/files/1/1365/6099/files/contact-hover.png?7292234058503633899';"
+           onmouseout="document.contactButton.src='https://cdn.shopify.com/s/files/1/1365/6099/files/contact.png?7292234058503633899';">
+          <img src="https://cdn.shopify.com/s/files/1/1365/6099/files/contact.png?7292234058503633899" style="z-index: 1000; position: relative;" name="contactButton" />
+        </a>
+      </li>
+
+    {% endif %}
+
+  {% endfor %}
+
+</ul>
+
+
+
+<div class="vertical-menu">
+  {% for link in linklists.main-menu.links %}
+
+    {% assign child_list_handle = link.title | handleize %}
+
+{% if forloop.index == 1 %}
+
+      <li>
+        <a href="{{ link.url }}" onmouseover="document.shopButtonVertical.src='https://cdn.shopify.com/s/files/1/1365/6099/files/shop-hover.png?7292234058503633899';"
+           onmouseout="document.shopButtonVertical.src='https://cdn.shopify.com/s/files/1/1365/6099/files/shop.png?7292234058503633899';">
+          <img src="https://cdn.shopify.com/s/files/1/1365/6099/files/shop.png?7292234058503633899" style="display: block; margin-left: auto; margin-right: auto; margin-top: 7%; width: 11%;" name="shopButtonVertical" />
+        </a>
+      </li>
+
+    {% endif %}
+
+    {% if forloop.index == 3 %}
+
+      <li>
+        <a href="{{ link.url }}" onmouseover="document.vaultButtonVertical.src='https://cdn.shopify.com/s/files/1/1365/6099/files/vault-hover.png?7292234058503633899';"
+           onmouseout="document.vaultButtonVertical.src='https://cdn.shopify.com/s/files/1/1365/6099/files/vault.png?7292234058503633899';">
+          <img src="https://cdn.shopify.com/s/files/1/1365/6099/files/vault.png?7292234058503633899" style="width: 11%; transform: rotate(270deg); float:left; margin-top: 14%;" name="vaultButtonVertical" />
+        </a>
+      </li>
+
+    {% endif %}
+
+    {% if forloop.index == 2 %}
+
+    <li>
+        <a href="{{ link.url }}" onmouseover="document.lookbookButtonVertical.src='https://cdn.shopify.com/s/files/1/1365/6099/files/lookbook-hover.png?7292234058503633899';"
+           onmouseout="document.lookbookButtonVertical.src='https://cdn.shopify.com/s/files/1/1365/6099/files/lookbook.png?7292234058503633899';">
+          <img src="https://cdn.shopify.com/s/files/1/1365/6099/files/lookbook.png?7292234058503633899" style="width: 11%; transform: rotate(90deg); float:right; margin-top: 14%;" name="lookbookButtonVertical" />
+        </a>
+      </li>
+
+    {% endif %}
+
+    {% if forloop.index == 4 %}
+
+      <li>
+        <a href="{{ link.url }}" onmouseover="document.contactButtonVertical.src='https://cdn.shopify.com/s/files/1/1365/6099/files/contact-hover.png?7292234058503633899';"
+           onmouseout="document.contactButtonVertical.src='https://cdn.shopify.com/s/files/1/1365/6099/files/contact.png?7292234058503633899';">
+          <img src="https://cdn.shopify.com/s/files/1/1365/6099/files/contact.png?7292234058503633899" style="position: absolute;
+         top: 0; bottom:0; left: 0; right:0;
+    margin: 46% auto; width: 11%;" name="contactButtonVertical" />
+        </a>
+      </li>
+
+    {% endif %}
+
+  {% endfor %}
+</div>

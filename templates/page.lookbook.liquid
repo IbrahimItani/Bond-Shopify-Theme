@@ -1,0 +1,47 @@
+  {{ 'jquery.event.move.js' | asset_url | script_tag }}
+{{ 'jquery.event.swipe.js' | asset_url | script_tag }}
+  {{ 'unslider-min.js' | asset_url | script_tag }}
+  {{ 'unslider.css' | asset_url | stylesheet_tag }}
+
+  <script>
+  jQuery(document).ready(function($) {
+
+  var slider = $('.lookbook-slider').unslider({
+    autoplay: true,
+    nav: false,
+    infinite: true,
+    arrows: false,
+    delay: 5000,
+    keys: {
+      prev: 37,
+      next: 39
+    },
+  });
+  $(".prev").click(function() {
+    slider.unslider('prev');
+  });
+  $(".next").click(function() {
+    slider.unslider('next');
+  });
+
+});
+  </script>
+
+
+
+
+
+<div class="lookbook-slider" >
+  <ul>
+    <li><img src="https://cdn.shopify.com/s/files/1/1365/6099/files/slide1.jpg?10586088178929887754" class="sliderPic"></li>
+    <li><img src="https://cdn.shopify.com/s/files/1/1365/6099/files/slide2.jpg?10586088178929887754" class="sliderPic"></li>
+    <li><img src="https://cdn.shopify.com/s/files/1/1365/6099/files/slide3.jpg?10586088178929887754" class="sliderPic"></li>
+    <li><img src="https://cdn.shopify.com/s/files/1/1365/6099/files/slide4.jpg?10586088178929887754" class="sliderPic"></li>
+    <li><img src="https://cdn.shopify.com/s/files/1/1365/6099/files/slide5.jpg?10586088178929887754" class="sliderPic"></li>
+    <li><img src="https://cdn.shopify.com/s/files/1/1365/6099/files/slide6.jpg?10586088178929887754" class="sliderPic"></li>
+    <li><img src="https://cdn.shopify.com/s/files/1/1365/6099/files/slide7.jpg?10586088178929887754" class="sliderPic"></li>
+  </ul>
+
+  <div class='prev'><i class="fa fa-chevron-left" aria-hidden="true"></i> <img id="left-arrow" src="https://cdn.shopify.com/s/files/1/1365/6099/files/Left-Arrow_8336a8f3-3ecb-4ad2-87c8-fc0819dbc802.png?12540409361649404209"></div>
+  <div class='next'><i class="fa fa-chevron-right" aria-hidden="true"></i> <img id="right-arrow" src="https://cdn.shopify.com/s/files/1/1365/6099/files/Right-Arrow_16b92685-942c-4294-8e63-dbf8e921660b.png?12540409361649404209"></div>
+</div>
